@@ -356,8 +356,8 @@ body {
   html {
     font-size: 75%;
   }
-  .simply-countdown > .simply-section {
-    padding: 70%;
+  .simply-countdown > .simply-section .simply-amount {
+    padding: 10%;
   }
   .timeline::before {
     left: 60px;

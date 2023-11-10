@@ -30,7 +30,8 @@
       <h1>Putra & Putri</h1>
       <p>Akan melakukan resepsi pernikahan dalam:</p>
       <div class="simply-countdown"></div>
-      <a href="#home" class="btn btn-lg mt-4" onclick="enableScroll()">✉️ Lihat Undangan</a>
+      <a href="#home" class="btn btn-lg mt-4" onclick="enableScroll()"><span><i
+            class="bi bi-envelope-heart-fill"></i></span> Lihat Undangan</a>
     </main>
   </section>
   <!-- hero section akhir -->
@@ -426,8 +427,6 @@
         minutes: { singular: "Menit", plural: "Menit" },
         seconds: { singular: "Detik", plural: "Detik" },
       },
-      inline: false, //set to true to get an inline basic countdown like : 24 days, 4 hours, 2 minutes, 5 seconds
-      inlineClass: "simply-countdown-inline", //inline css span class in case of inline = true
       // in case of inline set to false
       enableUtc: false,
       onEnd: function () {
