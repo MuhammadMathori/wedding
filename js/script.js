@@ -18,13 +18,10 @@ const song = document.querySelector("#song");
 let isPlaying = false;
 
 function disableScroll() {
-  scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-  scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
-
-  window.onscroll = function () {
-    window.scrollTo(scrollTop, scrollLeft);
-  };
-  rootElement.style.scrollBehavior = "auto";
+  window.addEventListener("DOMMouseScroll", preventDefault, false); // older FF
+  window.addEventListener(wheelEvent, preventDefault, wheelOpt); // modern desktop
+  window.addEventListener("touchmove", preventDefault, wheelOpt); // mobile
+  window.addEventListener("keydown", preventDefaultForScrollKeys, false);
 }
 
 function enableScroll() {
