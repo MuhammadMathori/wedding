@@ -10,6 +10,12 @@ body {
   min-height: 2000px;
 }
 
+.pink {
+  background-color: var(--pink) !important;
+  color: #fff !important;
+  border: none !important;
+}
+
 .hero::before {
   content: "";
   position: absolute;
