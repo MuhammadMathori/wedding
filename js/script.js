@@ -22,12 +22,18 @@ function disableScroll() {
     window.scrollTo(0, 0);
   };
   rootElement.style.scrollBehavior = "auto";
+  document.body.style.overflowY = "hidden";
 }
 
 function enableScroll() {
+  let content = document.querySelector("#content");
+  content.removeAttribute("class");
+  document.body.style.overflowY = "auto";
+
   window.onscroll = function () {};
   rootElement.style.scrollBehavior = "smooth";
   playAudio();
+
   //localStorage.setItem('opened', 'true');
 }
 function playAudio() {
