@@ -18,10 +18,10 @@ const song = document.querySelector("#song");
 let isPlaying = false;
 
 function disableScroll() {
-  window.addEventListener("DOMMouseScroll", preventDefault, false); // older FF
-  window.addEventListener(wheelEvent, preventDefault, wheelOpt); // modern desktop
-  window.addEventListener("touchmove", preventDefault, wheelOpt); // mobile
-  window.addEventListener("keydown", preventDefaultForScrollKeys, false);
+  window.onscroll = function () {
+    window.scrollTo(0, 0);
+  };
+  rootElement.style.scrollBehavior = "auto";
 }
 
 function enableScroll() {
