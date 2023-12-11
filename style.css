@@ -412,6 +412,9 @@ body {
     width: 140px;
     height: 140px;
   }
+  .audio-icon-wrapper {
+    bottom: 2.5rem;
+  }
 }
 
 /* mobile */
@@ -436,5 +439,8 @@ body {
   }
   .timeline li .timeline-panel::after {
     top: 31px;
+  }
+  .audio-icon-wrapper {
+    bottom: 5.5rem;
   }
 }
